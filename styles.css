@@ -457,6 +457,37 @@ nav {
   cursor: pointer;
 }
 
+
+summary {
+  width: 100%;
+  padding: 15px;
+  background-color: var(--e-global-color-primary);
+  color: #fff;
+  border: none;
+  font-size: 18px;
+  text-align: left;
+  cursor: pointer;
+  border-radius: 5px;
+  outline: none;
+  transition: background-color 0.3s ease;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+}
+
+summary:hover {
+  background-color: var(--e-global-color-accent);
+}
+
+details[open] summary::after {
+  content: " ▲";
+}
+
+summary::after {
+  content: " ▼";
+  float: right;
+}
+
+
 .faq-section {
   width: 80%;
   margin: 0 auto;

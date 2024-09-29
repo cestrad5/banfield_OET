@@ -101,44 +101,17 @@
         document.getElementById("reviews-section").innerHTML = data;
       });
   </script>
+
   <!-- Placeholder for FAQs -->
   <div id="faqs"></div>
-
-  <!-- JavaScript to dynamically load the FAQ section and attach event listeners -->
   <script>
+    // Load the faq section from an external file
     fetch("faqs.html")
       .then((response) => response.text())
       .then((data) => {
         document.getElementById("faqs").innerHTML = data;
-
-        // Attach the event listeners after the FAQ content is loaded
-        const faqItems = document.querySelectorAll('.faq-question');
-
-        faqItems.forEach(item => {
-          item.addEventListener('click', function () {
-            const answer = this.nextElementSibling;
-
-            // Toggle the visibility of the answer
-            if (answer.style.display === "block") {
-              answer.style.display = "none"; // Collapse answer
-            } else {
-              answer.style.display = "block"; // Expand answer
-            }
-
-            // Optional: Add/remove 'active' class for styling
-            this.classList.toggle("active");
-          });
-        });
       });
   </script>
-
-
-  <!-- Your FAQ behavior script -->
-  <script src="script.js"></script>
-
-
-
-
   </div>
 
   <footer class="footer__container">
